@@ -1,10 +1,12 @@
-<template>
+ <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+      <router-link to="/">HomeView</router-link> |
+      <router-link to="/MyTeachers">MyTeacherView</router-link> |
+      <router-link to="/MYStudents">MYStudentsView</router-link> |
+    </nav>    <b-container>
+      <router-view />
+    </b-container>
   </div>
 </template>
 

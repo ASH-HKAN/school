@@ -1,29 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
+import MyTeachers from '@/views/MyTeachers.vue'
+import MyStudents from '@/views/MyStudents.vue'
+import MyEach from '@/views/MyEach.vue'
+import ForBidden404 from '@/views/ForBidden404.vue'
 
 Vue.use(VueRouter)
+export default new VueRouter({
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
-
-const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
+  base: process.env.Base_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+    {
+      path: '/MyTeachers',
+      name: 'Teachers',
+      component: MyTeachers
 
-export default router
+    },
+    {
+      path: '/MyStudents',
+      name: 'Students',
+      component: MyStudents
+
+    },
+    {
+      path: '/single/:cat/:id',
+      name: 'Each',
+      component: MyEach
+
+    },
+
+    {
+      path: '*',
+      component: ForBidden404
+    }
+
+  ]
+})
