@@ -3,23 +3,23 @@ export default
   {
     name: 'Ali',
     family: 'Tehrani',
-    Age: 42,
-    Country: 'Iran',
-    City: 'Tehran'
+    age: 42,
+    country: 'Iran',
+    city: 'Tehran'
   },
   {
     name: 'Amir',
     family: 'Moghaddam',
-    Age: 34,
-    Country: 'Iran',
-    City: 'Ahvaz'
+    age: 34,
+    country: 'Iran',
+    city: 'Ahvaz'
   },
   {
     name: 'Stephen',
-    family: 'Ahmadi',
-    Age: 55,
-    Country: 'France',
-    City: 'Paris'
+    family: 'Maier',
+    age: 55,
+    country: 'France',
+    city: 'Paris'
   }
 
 ]

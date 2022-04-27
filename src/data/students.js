@@ -3,23 +3,23 @@ export default
   {
     name: 'Ashkan',
     family: 'Bayat',
-    Age: 15,
-    Country: 'Iran',
-    City: 'Tehran'
+    age: 15,
+    country: 'Iran',
+    city: 'Tehran'
   },
   {
     name: 'Sasan',
     family: 'Moghaddam',
-    Age: 19,
-    Country: 'Iran',
-    City: 'Tehran'
+    age: 17,
+    country: 'Iran',
+    city: 'Golestan'
   },
   {
-    name: 'Stephen',
-    family: 'BM',
-    Age: 16,
-    Country: 'France',
-    City: 'Paris'
+    name: 'Ramin',
+    family: 'Maier',
+    age: 18,
+    country: 'Spain',
+    city: 'Barcelon'
   }
 
 ]

@@ -2,23 +2,24 @@
   <div>
     <b-table striped hover :items="teachers">
       <template #cell(name)="data">
-        <!-- `data.value` is the value after formatted by the Formatter -->
-        <router-link :to="`/single/teachers /${data.index}`">{{
+         <router-link :to="`/single/teachers/${data.index}`">{{
           data.value
         }}</router-link>
       </template>
     </b-table>
+    <p> Count Of Tehran Teachers : {{TehranTeachers.length}} </p>
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   data () {
     return {}
   },
   computed: {
-    ...mapState(['teachers'])
+    ...mapState(['teachers']),
+    ...mapGetters(['TehranTeachers'])
   }
 }
 </script>

@@ -1,9 +1,9 @@
-import students from '@/data/students'
-import teachers from '@/data/teachers'
+import students from '../data/students'
+import teachers from '../data/teachers'
 
 export default {
 
-  students,
-  teachers
+  teachers,
+  students
 
 }
