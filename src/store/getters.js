@@ -5,14 +5,14 @@ export default {
   },
   TehranStudents: (state) => {
     const DATACITY = state.students.filter((student) => {
-      return student.city === 'Tehran'
+      return student.family
     })
     return DATACITY
   },
 
   TehranTeachers: (state) => {
     const data = state.teachers.filter((teacher) => {
-      return teacher.city === 'Tehran'
+      return teacher.family
     })
     return data
   }

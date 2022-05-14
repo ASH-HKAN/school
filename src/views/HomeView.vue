@@ -1,27 +1,41 @@
 <template>
-
   <div class="home-container">
-
-  <div>
-        <b-button v-b-toggle.sidebar-border>More Information</b-button>
-    <b-sidebar id="sidebar-border" sidebar-class="">
-      <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar>
-  </div>
+    <div>
+      <ul class="nav ">
+        <li class="nav-item col-sm-4 m-auto">
+          <a
+            class="nav-link active"
+            href="https://www.instagram.com"
+            >Instagram</a
+          >
+        </li>
+        <li class="nav-item col-sm-4 m-auto">
+          <a
+            class="nav-link"
+            href="https://www.twitch.tv"
+            >Twitter</a
+          >
+        </li>
+        <li class="nav-item col-sm-5 m-auto">
+          <a class="nav-link" href="https://www.apple.com/">Apple ID</a>
+        </li>
+        <li class="nav-item col-sm-1 m-auto">
+          <a class="nav-link" href="https://google.com">Google Accoutn</a>
+        </li>
+      </ul>
+    </div>
 
     <h1>Add New Teacher/Student</h1>
     <!-- <p> Count of Users  : {{ usersCount }} </p> -->
-    <b-button type="Open/Close insert Form" variant="warning" @click="toggleForm">Open/Close insert Form</b-button>
-<b-form @submit.prevent="SubmitHandler"  v-if="toggleData">
-
-  <b-spinner type="grow" label="Spinning"></b-spinner>
-  <b-spinner variant="danger" type="grow" label="Spinning"></b-spinner>
+    <b-button
+      type="Open/Close insert Form"
+      variant="warning"
+      @click="toggleForm"
+      >Open/Close insert Form</b-button
+    >
+    <b-form @submit.prevent="SubmitHandler" v-if="toggleData">
+      <b-spinner type="grow" label="Spinning"></b-spinner>
+      <b-spinner variant="danger" type="grow" label="Spinning"></b-spinner>
 
       <b-form-group id="input-group-2" label="Name:" label-for="input-2">
         <b-form-input
@@ -50,7 +64,7 @@
         ></b-form-input>
       </b-form-group>
 
-       <b-form-group id="input-group-9" label="Country:" label-for="input-2">
+      <b-form-group id="input-group-9" label="Country:" label-for="input-2">
         <b-form-input
           id="country"
           v-model="formData.country"
@@ -72,7 +86,7 @@
         <b-form-select
           id="input-3"
           v-model="formData.cat"
-          :options="['teachers' , 'students']"
+          :options="['teachers', 'students']"
           required
         ></b-form-select>
       </b-form-group>
@@ -80,19 +94,16 @@
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
-      </div>
-
+  </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 export default {
-
   data () {
     return {
       toggleData: false,
       formData: {
-
         name: '',
         family: '',
         age: 0,
@@ -103,7 +114,6 @@ export default {
     }
   },
   methods: {
-
     toggleForm () {
       this.toggleData = !this.toggleData
     },
@@ -130,7 +140,6 @@ export default {
 
 <style scoped>
 .btn {
-  margin: 100px 100px;
+  margin: 10px 100px;
 }
-
 </style>

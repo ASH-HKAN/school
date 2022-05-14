@@ -5,6 +5,8 @@ import MyTeachers from '@/views/MyTeachers.vue'
 import MyStudents from '@/views/MyStudents.vue'
 import MyEach from '@/views/MyEach.vue'
 import ForBidden404 from '@/views/ForBidden404.vue'
+import MyRegister from '@/views/MyRegister'
+import MyLogin from '@/views/MyLogin'
 
 Vue.use(VueRouter)
 export default new VueRouter({
@@ -39,7 +41,18 @@ export default new VueRouter({
     {
       path: '*',
       component: ForBidden404
-    }
+    },
+    {
+      path: '/Register',
+      name: 'Register',
+      component: MyRegister
 
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: MyLogin
+
+    }
   ]
 })

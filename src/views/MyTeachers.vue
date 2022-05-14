@@ -2,12 +2,12 @@
   <div>
     <b-table striped hover :items="teachers">
       <template #cell(name)="data">
-         <router-link :to="`/single/teachers/${data.index}`">{{
+        <router-link :to="`/single/teachers/${data.index}`">{{
           data.value
         }}</router-link>
       </template>
     </b-table>
-    <p> Count Of Tehran Teachers : {{TehranTeachers.length}} </p>
+    <p>Count Of Teachers : {{ TehranTeachers.length }}</p>
   </div>
 </template>
 <script>

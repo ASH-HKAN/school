@@ -7,6 +7,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import axios from 'axios'
+
+Vue.prototype.$axios = axios
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)

@@ -7,7 +7,7 @@
         }}</router-link>
       </template>
     </b-table>
-    <p> Count Of Tehran Students : {{TehranStudents.length}} </p>
+    <p> Count Of  Students : {{TehranStudents.length}} </p>
   </div>
 </template>
 
